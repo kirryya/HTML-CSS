@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Расчёт расхода топлива</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            background-color: aqua;
+            font-size: 125%
+        }
+
+        h1 {
+            background-color: cornflowerblue
+        }
+
+        .km {
+            color: chocolate;
+            font-size: 135%
+        }
+
+        .fuel {
+            color: chocolate;
+            font-size: 135%
+        }
+
+        .consumption {
+            color: brown;
+            font-size: 150%
+        }
+    </style>
+    <script>
+        function fuelConsumption(fuel, km) {
+            document.getElementById('fuel').innerHTML = Number(fuel);
+            document.getElementById('km').innerHTML = Number(km);
+            let cons = fuel / km * 100;
+            document.getElementById('consumption').innerHTML = cons.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+<div>
+    <h1>Расчёт расхода топлива</h1>
+</div>
+<div>
+    Вы проехали <span id="km" class="km">_</span> киломметров
+</div>
+<div>
+    За время поездки было израсходовано <span id="fuel" class="fuel">_</span> литров
+    топлива
+</div>
+<div>
+    Расход составляет <span id="consumption" class="consumption">_</span> литра(ов) на 100 километров
+</div>
+<script>
+    let fuelNow = prompt("Введите количество топлива");
+    let kmNow = prompt("Введите расстояние в километрах");
+    fuelConsumption(fuelNow, kmNow);
+</script>
+
+</body>
+</html>
+
+
+
+

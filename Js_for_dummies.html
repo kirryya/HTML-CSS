@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function countToTen() {
+            let count = 0;
+            while (count < 10) {
+                count++;
+                document.getElementById('theCount').innerHTML += count + '<br>';
+            }
+        }
+    </script>
+</head>
+<body onload="countToTen();">
+<h1>Посчитаем вместе до 10</h1>
+<p id="theCount"></p>
+<button style="color: red; background-color: black" onclick="alert('Привет, мир')" ;>Щелкните здесь</button>
+</body>
+</html>
